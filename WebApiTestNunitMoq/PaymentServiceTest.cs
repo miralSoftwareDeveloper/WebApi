@@ -31,7 +31,7 @@ namespace WebApiTestNunitMoq
             
         }
 
-        //[Test]
+        [Test]
         public void AddPaymentTest()
         {
             // Arrange
@@ -55,7 +55,7 @@ namespace WebApiTestNunitMoq
             Assert.IsTrue(responseTrue);
         }
 
-        //[Test]
+        [Test]
         public void AddPaymentForNullTest()
         {
 
