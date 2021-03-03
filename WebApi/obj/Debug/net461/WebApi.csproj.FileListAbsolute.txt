@@ -327,3 +327,4 @@ C:\Users\Guru\source\repos\WebApi\obj\Debug\net461\WebApi.RazorTargetAssemblyInf
 C:\Users\Guru\source\repos\WebApi\obj\Debug\net461\WebApi.csproj.CopyComplete
 C:\Users\Guru\source\repos\WebApi\obj\Debug\net461\WebApi.exe
 C:\Users\Guru\source\repos\WebApi\obj\Debug\net461\WebApi.pdb
+C:\Users\Guru\source\repos\WebApi\obj\Debug\net461\WebApi.csprojAssemblyReference.cache

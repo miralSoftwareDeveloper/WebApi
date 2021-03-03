@@ -113,5 +113,31 @@ namespace WebApi.Services
             return isUpdated;
 
         }
+
+        public PaymentDTO GetPayment(int paymentId)
+        {
+
+            PaymentDTO paymentDTO = new PaymentDTO();
+            Payment payment =  unitOfWork.PaymentRepo.GetPaymentById(paymentId);
+            PaymentStatus paymentStatus = unitOfWork.PaymentStatusRepo.GetPaymentStatusById(payment.ID);
+            string StatusName = Helper.ConvertEnumToString(paymentStatus.StatusName);
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Payment, PaymentDTO>()
+                .ForSourceMember(source => source.ID, opt => opt.DoNotValidate());
+            });
+            paymentDTO.Status = StatusName;
+
+
+            IMapper iMapper = config.CreateMapper();
+            iMapper.Map(payment,paymentDTO );
+
+
+
+
+            return paymentDTO;
+
+           
+        
+        }
     }
 }

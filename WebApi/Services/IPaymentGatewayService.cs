@@ -14,6 +14,8 @@ namespace WebApi.Services
         bool PaymentGateway(PaymentDTO paymentDTO);
         bool UpdatePaymentGateway(int id, PaymentDTO paymentDTO);
 
+        PaymentDTO GetPayment(int paymentId);
+
     }
 
     //public interface IExpensivePaymentGateway
